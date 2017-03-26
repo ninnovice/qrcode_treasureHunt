@@ -16,12 +16,12 @@
         <div ng-show="questActive" style="color: white; width: 100%">
             <p><b>{{ url }}</b></p>
             <p>{{ activeQuest.statement}}</p>
-            <input type="radio" name="option" ng-value= "$scope.activeQuest.options[0]" ng-model="selectedAns"> {{activeQuest.options[0]}}<br>
+            <input type="radio" name="option" ng-value= "activeQuest.options[0]" ng-model="selectedAns"> {{activeQuest.options[0]}}<br>
             <input type="radio" name="option" ng-value="activeQuest.options[1]" ng-model="selectedAns"> {{activeQuest.options[1]}}<br>
             <input type="radio" name="option" ng-value="activeQuest.options[2]" ng-model="selectedAns"> {{activeQuest.options[2]}}<br>
             <input type="radio" name="option" ng-value="activeQuest.options[3]" ng-model="selectedAns"> {{activeQuest.options[3]}}
             
-            <button ng-click="check(selectedAns)">GO{{selectedAns}}</button>
+            <button ng-click="check(selectedAns)">GO {{selectedAns}}</button>
         </div>
         <div style="width: 100%" class="glassZoom">
 <!--            <img src="res/glasses.png" ng-click="start()" ng-hide= "questActive" alt="" class="glass"/>-->

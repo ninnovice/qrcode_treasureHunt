@@ -20,7 +20,7 @@ function DemoCtrl($scope, $http, $window) {
         $scope.questActive = false;
         $scope.questCompleted = false;
         $scope.activeQuest;
-        
+
     }
 
 
@@ -53,17 +53,19 @@ function DemoCtrl($scope, $http, $window) {
         // console.log($scope.questions.question[parseInt(quesID)].statement);
         $scope.activeQuest = $scope.questions.question[parseInt(quesID)];
 
-         //console.log(activeQuest.statement)
+        //console.log(activeQuest.statement)
     }
 
     $scope.check = function (selectedAns) {
         //console.log(selectedAns);
-        //console.log($scope.activeQuest.answer);
+        console.log($scope.activeQuest.answer);
         if (selectedAns == $scope.activeQuest.answer) {
             //alert('hooray');
             $scope.questActive = false;
             $scope.questCompleted = true;
-            $scope.reloadPage = function(){$window.location.reload();}
+            $scope.reloadPage = function () {
+                $window.location.reload();
+            }
         }
         else {
             $scope.imgPath = 'res/astroFall.jpg';
