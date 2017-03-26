@@ -2,8 +2,8 @@ angular
         .module('demoApp')
         .controller("DemoCtrl", DemoCtrl);
 
-function DemoCtrl($scope, $http, $window) {
-    $http.get('res/dataset.json').success(function (data) {
+function DemoCtrl($scope, $https, $window) {
+    $https.get('res/dataset.json').success(function (data) {
         console.log(data);
         $scope.questions = data;
 
