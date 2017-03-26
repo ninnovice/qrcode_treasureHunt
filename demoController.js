@@ -3,7 +3,7 @@ angular
         .controller("DemoCtrl", DemoCtrl);
 
 function DemoCtrl($scope, $http, $window) {
-    $http.get('res/dataset.json').success(function (data) {
+    $http.get('qrcode_treasureHunt/res/dataset.json').success(function (data) {
         console.log(data);
         $scope.questions = data;
 
